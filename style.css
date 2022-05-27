@@ -64,6 +64,10 @@ h2 {
   grid-row: 2 / span 2;
   /* font-family: 'Bitter', serif; */
 }
+.book_review {
+  grid-column: 2 / span 8;
+}
+
 /* .three {
   grid-column: 3 / span 8;
   grid-row: 2 / 5;
