@@ -1,0 +1,92 @@
+/* * {
+  border: 1px solid darkred;
+} */
+p {
+  font-family: 'Bitter', serif;
+}
+h2 {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 5px;
+  grid-template-rows: 50px;
+  grid-auto-rows: minmax(100px, auto);
+  margin: auto 50 px;
+}
+.one {
+  grid-column: 2 / span 3;
+  grid-row: 1;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 0.5px;
+  text-align: left;
+  border-radius: 0 0 6px;
+  align-self: center;
+
+}
+.climbing {
+  grid-column: 6 / span 1;
+  grid-row: 1 / 2;
+  display: grid;
+  border-radius: 0 0 6px 6px;
+}
+.books {
+  grid-column: 7 / span 1;
+  grid-row: 1 / 2;
+  display: grid;
+  border-radius: 0 0 6px 6px;
+}
+.maps {
+  grid-column: 8 / span 1;
+  grid-row: 1 / 2;
+   display: grid;
+  border-radius: 0 0 0 6px;
+}
+.maps, .books, .climbing {
+  align-content: center;
+  justify-content: center;
+  font-family: 'Quicksand', sans-serif;
+  color: black
+}
+.image {
+  grid-column: 6 / span 3;
+  grid-row: 2 / span 4;
+  justify-items: end;
+  border-radius: 10px;
+  /* align-self: flex-end; */
+}
+.about-me {
+  grid-column: 2 / span 3;
+  grid-row: 2 / span 2;
+  /* font-family: 'Bitter', serif; */
+}
+/* .three {
+  grid-column: 3 / span 8;
+  grid-row: 2 / 5;
+  background-color: yellow;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+} */
+.stats {
+  grid-column: 7 / span 3;
+  grid-row: 3 / 3;
+  background-color: green;
+  align-content: center;
+  justify-content: center;
+  display: block;
+}
+/* .five {
+  grid-column: 2;
+  grid-row: 4;
+  background-color: saddlebrown; 
+} */
+.six {
+  grid-column: 2 / span 4;
+  grid-row: 4 / span 2;
+
+}
