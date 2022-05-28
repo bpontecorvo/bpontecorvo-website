@@ -60,6 +60,7 @@ h2 {
 }
 .book_image {
   border: 1px solid grey;
+  border-radius: 3px;
 }
 .about-me {
   grid-column: 2 / span 3;
