@@ -1,11 +1,13 @@
-/* * {
+ /* * {
   border: 1px solid darkred;
-} */
+}  */
 p {
   font-family: 'Bitter', serif;
+  display: inline;
 }
 h2 {
   font-family: 'Quicksand', sans-serif;
+  display: inline;
 }
 
 .wrapper {
@@ -54,13 +56,29 @@ h2 {
 .image {
   grid-column: 6 / span 3;
   grid-row: 2 / span 4;
-  justify-items: end;
+  justify-items: end;                       /* This is to style the main image of me on the homepage */
   border-radius: 10px;
   border: 1px solid grey;
 }
 .book_image {
-  border: 1px solid grey;
-  border-radius: 7px;
+  height: 270px;
+  width: 174px;
+  display: inline-block;                     /* This is the container for the image + rating to style the book screen grabs */
+  vertical-align: top;
+  text-align: center;
+  margin: o auto 5px;
+}
+.book_thumbnail {
+  border-radius: 3px;                         /* This just to style the book screen grabs */
+  border: 1px solid black;
+
+}
+.book_description {
+  height: 270px;                          /* This is the Container for the description + links */
+  width: 800px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px;
 }
 .about-me {
   grid-column: 2 / span 3;
@@ -68,14 +86,17 @@ h2 {
   /* font-family: 'Bitter', serif; */
 }
 .book_review {
-   grid-column: 2 / span 8;                      /* Styling for Book Review Page */
+  grid-column: 2 / span 8;                      /* Styling for Book Review Page */
   grid-row: 2 / 100;
   text-align: center;
 }
- .book_outline {                                 /* Styling for the review itself */
+ .review_bucket {                                 /* Styling for the review itself */
   grid-column: 2 / span 8;                     
   grid-row: 4 / 100;
-  display: inline;
+  display: inline-block;
+}
+.book_outline {
+  display: inline-block;
 }
 .stats {
   grid-column: 7 / span 3;
