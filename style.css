@@ -1,6 +1,6 @@
- /* * {
+ * {
   border: 1px solid darkred;
-}  */
+} 
 p {
   font-family: 'Bitter', serif;
   display: inline;
@@ -62,7 +62,8 @@ h2 {
 }
 .book_image {
   height: 270px;
-  width: 174px;
+  min-width: 174px;
+  width: 25%;
   display: inline-block;                     /* This is the container for the image + rating to style the book screen grabs */
   vertical-align: top;
   text-align: center;
@@ -75,7 +76,7 @@ h2 {
 }
 .book_description {
   height: 270px;                          /* This is the Container for the description + links */
-  width: 800px;
+  width: 70%;
   display: inline-block;
   vertical-align: top;
   margin: 5px;
