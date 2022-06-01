@@ -1,6 +1,6 @@
- * {
+ /* * {
   border: 1px solid darkred;
-} 
+}  */
 p {
   font-family: 'Bitter', serif;
   display: inline;
@@ -47,7 +47,7 @@ h2 {
   display: grid;
   border-radius: 0 0 0 6px;
 }
-.maps, .books, .climbing {
+.maps, .books, .climbing, .more {
   align-content: center;
   justify-content: center;
   font-family: 'Quicksand', sans-serif;
@@ -67,7 +67,7 @@ h2 {
   display: inline-block;                     /* This is the container for the image + rating to style the book screen grabs */
   vertical-align: top;
   text-align: center;
-  margin: o auto 5px;
+  padding-top: 5px;
 }
 .book_thumbnail {
   border-radius: 3px;                         /* This just to style the book screen grabs */
@@ -75,16 +75,51 @@ h2 {
 
 }
 .book_description {
-  height: 270px;                          /* This is the Container for the description + links */
+  min-height: 270px;                          /* This is the Container for the description + links */
   width: 70%;
   display: inline-block;
   vertical-align: top;
   margin: 5px;
+  /* overflow: auto; */
+}
+a:hover {
+  cursor: pointer;                   /*    Style Cursor to be pointer over links */
+}
+.more {                             /*    Style "more" bucket   */
+
+  text-align: center;
+  margin: 5px;
+}
+.more > h3 {
+  display: inline;
 }
 .about-me {
   grid-column: 2 / span 3;
   grid-row: 2 / span 2;
   /* font-family: 'Bitter', serif; */
+}
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 9px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 17px;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+.active, .collapsible:hover {
+  background-color: rgb(56, 112, 49);
+
+}
+.content {
+  padding: 5px 21px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
 }
 .book_review {
   grid-column: 2 / span 8;                      /* Styling for Book Review Page */
@@ -96,16 +131,9 @@ h2 {
   grid-row: 4 / 100;
   display: inline-block;
 }
+
 .book_outline {
-  display: inline-block;
-}
-.stats {
-  grid-column: 7 / span 3;
-  grid-row: 3 / 3;
-  background-color: green;
-  align-content: center;
-  justify-content: center;
-  display: block;
+  display: inline;
 }
 /* .five {
   grid-column: 2;
