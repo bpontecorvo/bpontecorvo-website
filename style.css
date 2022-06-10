@@ -11,7 +11,6 @@ h2 {
   font-family: 'Quicksand', sans-serif;
   display: inline;
 }
-
 .wrapper {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
