@@ -1,6 +1,8 @@
- /* * {
-  border: 1px solid darkred;
-}  */
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+body {
+  background-color: #f0f0f0;
+  font-family: "Arvo", serif;
+}
 p {
   font-family: 'Bitter', serif;
   display: inline;
@@ -60,71 +62,33 @@ h2 {
   border-radius: 10px;
   border: 1px solid grey;
 }
-.book_image {
-  height: 270px;
-  min-width: 174px;
-  width: 25%;
-  display: inline-block;                     /* This is the container for the image + rating to style the book screen grabs */
-  vertical-align: top;
-  text-align: center;
-  padding-top: 5px;
-}
-.book_thumbnail {
-  border-radius: 3px;                         /* This just to style the book screen grabs */
-  border: 1px solid black;
-
-}
-.book_description {
-  min-height: 270px;                          /* This is the Container for the description + links */
-  width: 70%;
-  display: inline-block;
-  vertical-align: top;
-  margin: 5px;
-  /* overflow: auto; */
-}
-a:hover {
-  cursor: pointer;                   /*    Style Cursor to be pointer over links */
-}
-.more {                             /*    Style "more" bucket   */
-
-  text-align: center;
-  margin: 5px;
-}
-.more > h3 {
-  display: inline;
-}
 .about-me {
   grid-column: 2 / span 3;
   grid-row: 2 / span 2;
-  /* font-family: 'Bitter', serif; */
 }
-.collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 9px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 17px;
-  text-align: center;
-  letter-spacing: 0.3px;
-}
-.active, .collapsible:hover {
-  background-color: rgb(56, 112, 49);
 
-}
-.content {
-  padding: 5px 21px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-.book_review {
-  grid-column: 2 / span 8;                      /* Styling for Book Review Page */
-  grid-row: 2 / 100;
+/* Book Review Page Stuff */
+h1 {
+  margin: 3rem 0 2rem;
   text-align: center;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.book {
+  background-color: fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px;
+  padding: 2rem;
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border-radius: 1%;
+}
+.book.active {
+  background-color: #c7f5e3fb;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px;
 }
 .book.active::before {
   content: "\f02e";
@@ -180,16 +144,19 @@ a:hover {
   display: none;
 }
 
-.book_outline {
-  display: inline;
+.book.active .book-toggle .fa-times {
+  display: block;
+  color: #333;
 }
-/* .five {
-  grid-column: 2;
-  grid-row: 4;
-  background-color: saddlebrown; 
-} */
-.six {
-  grid-column: 2 / span 4;
-  grid-row: 4 / span 2;
+
+.book.active .book-toggle .fa-chevron-down {
+  display: none;
+}
+
+.book_thumbnail {
+  border-radius: 3px;                         /* This just to style the book screen grabs */
+  border: 1px solid black;
+  margin-right: 10px;
+  max-height: 210px;
 
 }
