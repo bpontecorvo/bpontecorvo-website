@@ -126,10 +126,58 @@ a:hover {
   grid-row: 2 / 100;
   text-align: center;
 }
- .review_bucket {                                 /* Styling for the review itself */
-  grid-column: 2 / span 8;                     
-  grid-row: 4 / 100;
-  display: inline-block;
+.book.active::before {
+  content: "\f02e";
+  font-family: "Font Awesome 5 Free";
+  color: #0010f7f7;
+  font-size: 7rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: .15;
+  z-index: 0;
+  }
+.book-title {
+    display: flex;
+    letter-spacing: .1ch;
+}
+.book-text {
+  display: none;
+  margin: 1rem 0 0;
+}
+.book.active .book-text {
+  display: block;
+}
+.book-toggle {
+  background-color: #c7f5e3fb;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 0;
+  position: relative;
+  top: 28px;
+  left: 250px;
+  height: 40px;
+  width: 40px;
+  margin: auto 0;
+}
+.image {
+  margin: 5px;
+}
+.book-toggle:focus {
+  outline: none;
+}
+
+.book.active .book-toggle {
+  background-color: #fff;
+}
+
+.book-toggle .fa-times {
+  display: none;
 }
 
 .book_outline {
