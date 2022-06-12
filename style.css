@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
 body {
-  background-color: #f0f0f0;
+  background-color: #F6F4D2;
   font-family: "Arvo", serif;
 }
 p {
@@ -35,6 +35,7 @@ h4 {
   text-align: left;
   border-radius: 0 0 6px;
   align-self: center;
+  display: grid;
 }
 .climbing {
   grid-column: 6 / span 1;
@@ -58,7 +59,8 @@ h4 {
   align-content: center;
   justify-content: center;
   font-family: 'Quicksand', sans-serif;
-  color: black
+  color: black;
+  border: 1px solid black;
 }
 .image {
   grid-column: 6 / span 3;
@@ -84,11 +86,12 @@ h1 {
   min-width: 600px;
   max-width: 800px;
   margin: 0 auto;
+  background-color: #CBDFBD;
 }
 .book {
   background-color: fff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px;
-  padding: 2rem;
+  padding: 0 15px;;
   margin: 20px 0;
   position: relative;
   overflow: hidden;
@@ -96,7 +99,7 @@ h1 {
   border-radius: 1%;
 }
 .book.active {
-  background-color: #c7f5e3fb;
+  background-color: #CBDFBD;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px;
 }
 .book.active::before {
@@ -107,12 +110,12 @@ h1 {
   position: absolute;
   top: 10px;
   right: 10px;
-  opacity: .15;
+  opacity: .09;
   z-index: 0;
   }
 .book-title {
     display: flex;
-    letter-spacing: .1ch;
+    letter-spacing: .09;
 }
 .book-text {
   display: none;
@@ -122,8 +125,8 @@ h1 {
   display: block;
 }
 .book-toggle {
-  background-color: #c7f5e3fb;
-  border: none;
+  background-color: #CBDFBD;
+  border: 2px solid #6E6E6E;
   cursor: pointer;
   border-radius: 50%;
   display: flex;
@@ -132,11 +135,14 @@ h1 {
   font-size: 1.3rem;
   padding: 0;
   position: relative;
-  top: 28px;
-  left: 250px;
+  top: -8px;
+  left: 338px;
   height: 40px;
   width: 40px;
   margin: auto 0;
+}
+.book-toggle:hover {
+  
 }
 .image {
   margin: 5px;
@@ -146,7 +152,7 @@ h1 {
 }
 
 .book.active .book-toggle {
-  background-color: #fff;
+  background-color: #CBDFBD;
 }
 
 .book-toggle .fa-times {
