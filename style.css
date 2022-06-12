@@ -2,6 +2,7 @@
 body {
   background-color: #F6F4D2;
   font-family: "Arvo", serif;
+  text-decoration: none;
 }
 p {
   font-family: 'Bitter', serif;
@@ -26,41 +27,43 @@ h4 {
   margin: auto 50 px;
 }
 .one {
-  grid-column: 2 / span 3;
+  grid-column: 1 / span 4;
   grid-row: 1;
   font-size: 18px;
   font-weight: 400;
   font-family: 'Quicksand', sans-serif;
   letter-spacing: 0.5px;
-  text-align: left;
-  border-radius: 0 0 6px;
-  align-self: center;
+  border-radius: 0 0 6px 6px;
+  /* align-self: center; */
   display: grid;
 }
 .climbing {
-  grid-column: 6 / span 1;
+  grid-column: 5 / span 2;
   grid-row: 1 / 2;
   display: grid;
   border-radius: 0 0 6px 6px;
 }
 .books {
-  grid-column: 7 / span 1;
+  grid-column: 7 / span 2;
   grid-row: 1 / 2;
   display: grid;
   border-radius: 0 0 6px 6px;
 }
 .maps {
-  grid-column: 8 / span 1;
+  grid-column: 9 / span 2;
   grid-row: 1 / 2;
   display: grid;
-  border-radius: 0 0 0 6px;
+  border-radius: 0 0 6px 6px;
 }
-.maps, .books, .climbing, .more {
+.maps, .books, .climbing, .one {
   align-content: center;
   justify-content: center;
   font-family: 'Quicksand', sans-serif;
   color: black;
   border: 1px solid black;
+  background-color: #EAC4D5;
+  position: relative;
+  top: -11px;
 }
 .image {
   grid-column: 6 / span 3;
