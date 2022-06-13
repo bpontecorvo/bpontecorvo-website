@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
 body {
-  background-color: #F6F4D2;
+  background-color: #EEEEE4;
   font-family: "Arvo", serif;
   text-decoration: none;
 }
@@ -21,7 +21,7 @@ h4 {
 .wrapper {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  gap: 5px;
+  gap: 0px;
   grid-template-rows: 50px;
   grid-auto-rows: minmax(100px, auto);
   margin: auto 50 px;
@@ -33,7 +33,6 @@ h4 {
   font-weight: 400;
   font-family: 'Quicksand', sans-serif;
   letter-spacing: 0.5px;
-  border-radius: 0 0 6px 6px;
   /* align-self: center; */
   display: grid;
 }
@@ -41,19 +40,17 @@ h4 {
   grid-column: 5 / span 2;
   grid-row: 1 / 2;
   display: grid;
-  border-radius: 0 0 6px 6px;
+
 }
 .books {
   grid-column: 7 / span 2;
   grid-row: 1 / 2;
   display: grid;
-  border-radius: 0 0 6px 6px;
 }
 .maps {
   grid-column: 9 / span 2;
   grid-row: 1 / 2;
   display: grid;
-  border-radius: 0 0 6px 6px;
 }
 .maps, .books, .climbing, .one {
   align-content: center;
@@ -61,7 +58,7 @@ h4 {
   font-family: 'Quicksand', sans-serif;
   color: black;
   border: 1px solid black;
-  background-color: #EAC4D5;
+  background-color: #B7A5CB;
   position: relative;
   top: -11px;
 }
@@ -89,7 +86,7 @@ h1 {
   min-width: 600px;
   max-width: 800px;
   margin: 0 auto;
-  background-color: #CBDFBD;
+  background-color: #B8D8A1;
 }
 .book {
   background-color: fff;
