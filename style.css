@@ -58,7 +58,7 @@ h4 {
   justify-content: center;
   font-family: 'Quicksand', sans-serif;
   color: black;
-  border: 0px solid black;
+  border: 1px solid #1D2F6F;
   background-color: #CCBEDA;
   position: relative;
   font-size: 20px;
@@ -66,7 +66,7 @@ h4 {
 }
 
 .maps:hover, .books:hover, .climbing:hover, .one:hover {
-  border-top-color: #51527B;
+border-top-color: #51527B;
 background: #51527B;
 color: #ccc;
 }
@@ -152,8 +152,8 @@ h1 {
   font-size: 1.3rem;
   padding: 0;
   position: relative;
-  top: -8px;
-  left: 338px;
+  top: -15px;
+  left: 362px;
   height: 40px;
   width: 40px;
   margin: auto 0;
@@ -215,12 +215,79 @@ p > a {
   }
 
 p > a:hover {
-      border-top-color: #28597a;
-    background: #28597a;
-    color: #ccc;
+  border-top-color: #51527B;
+  background: #51527B;
+  color: #ccc;
     }
 
 p > a:active {
-  border-top-color: #1b435e;
-  background: #1b435e;
-}                                                    /* THIS IS ALL FOR THE "MORE" BUTTONS  */
+  border-top-color: #1D2F6F;
+  background: #1D2F6F;
+}                                                   
+
+/* Heart stuff
+.back {
+  position: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  animation-name: backdiv;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  }
+  
+  .heart {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #ff2626;
+      height: 50px;
+      width: 50px;
+      transform: rotate(-45deg);
+      animation-name: beat;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+  }
+  
+  .heart::after {
+      background-color: #ff2626;
+      content: "";
+      border-radius: 50%;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 0;
+      left: 25px;
+  
+  }
+  .heart::before {
+      background-color: #ff2626;
+      content: "";
+      border-radius: 50%;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: -25px;
+      left: 0;
+  }
+  
+  @keyframes backdiv {
+      50% {
+          background: #ffe6f2;
+      }
+  }
+  
+  @keyframes beat {
+      0% {
+          transform: scale(1) rotate(-45deg);
+      }
+      50% {
+          transform: scale(.6) rotate(-45deg);
+      }
+  } */
