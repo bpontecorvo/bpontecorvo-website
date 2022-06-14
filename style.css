@@ -63,6 +63,17 @@ h4 {
   font-size: 20px;
   top: -11px;
 }
+
+.maps:hover, .books:hover, .climbing:hover, .one:hover {
+  border-top-color: #51527B;
+background: #51527B;
+color: #ccc;
+}
+
+.maps:active, .books:active, .climbing:active, .one:active {
+border-top-color: #1D2F6F;
+background: #1D2F6F;
+}
 .image {
   grid-column: 6 / span 3;
   grid-row: 2 / span 4;
