@@ -6,7 +6,7 @@ body {
 }
 p {
   font-family: 'Bitter', serif;
-  display: inline;
+  display: block;
 }
 a {
   text-decoration: none;
@@ -14,6 +14,7 @@ a {
 h2 {
   font-family: 'Quicksand', sans-serif;
   display: inline;
+  margin: 0 auto;
 }
 h4 {
   text-align: center;
@@ -52,7 +53,7 @@ h4 {
   grid-row: 1 / 2;
   display: grid;
 }
-.maps, .books, .climbing, .one {
+ .maps, .books, .climbing, .one {                 /*    Nav Bar Items  */
   align-content: center;
   justify-content: center;
   font-family: 'Quicksand', sans-serif;
@@ -75,15 +76,19 @@ border-top-color: #1D2F6F;
 background: #1D2F6F;
 }
 .image {
-  grid-column: 6 / span 3;
+  grid-column: 6 / span 2;
   grid-row: 2 / span 4;
   justify-items: end;                       /* This is to style the main image of me on the homepage */
   border-radius: 10px;
   border: 1px solid grey;
 }
 .about-me {
-  grid-column: 2 / span 3;
+  grid-column: 2 / span 4;
   grid-row: 2 / span 2;
+}
+.six {
+  grid-column: 2 / span 3;
+  grid-row: 4 / span 2;
 }
 /* Book Review Page Stuff */
 h1 {
