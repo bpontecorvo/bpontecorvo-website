@@ -26,6 +26,11 @@ h4 {
   grid-template-rows: 50px;
   grid-auto-rows: minmax(100px, auto);
   margin: auto 50 px;
+  position: fixed;
+  width: 100%;
+  top: 10px;
+  left: 1px;
+  z-index: 1;
 }
 .one {
   grid-column: 1 / span 4;
@@ -94,6 +99,7 @@ background: #1D2F6F;
 h1 {
   margin: 3rem 0 2rem;
   text-align: center;
+  margin-top: 76px;
 }
 .Book_review_sub_heading {
   max-width: 1000px;
@@ -102,7 +108,7 @@ h1 {
 .container {
   min-width: 600px;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 0 0 202px;
   background-color: #B8D8A1;
 }
 .book {
