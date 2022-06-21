@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="https://kit.fontawesome.com/fcdb5cfd7f.js" crossorigin="anonymous"></script>
+    <script src="filter.js"></script>
     <title>Book Reviews</title>
 </head>
 <body>
@@ -16,9 +17,21 @@
         <div class="maps">Map Projects</div>
     </div>
     <h1>Book Reviews</h1>
-    <h4 class="Book_review_sub_heading">I created this page to share some good and not-so-good books myself and my friends have been reading. I also just needed a good project for doing a bunch of CSS from scratch.  Enjoy.
+    <h4 class="Book_review_sub_heading">I created this page to share some good and not-so-good books myself and my friends have been reading. I also just needed a good project for doing a bunch of web development from scratch.  Enjoy.
     </h4>
-    <div class="container">
+
+    <!-- Control buttons -->
+    <div id="myBtnContainer">
+        <p class="btn">Fliter by Tag</p>
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('fake')"> Fiction</button>
+        <button class="btn" onclick="filterSelection('nonfiction')"> Non-fiction</button>
+        <button class="btn" onclick="filterSelection('autobiographical')">Autobiographical</button>
+        <button class="btn" onclick="filterSelection('PNW')">Pacific Northwest</button>
+        <!-- <button class="btn" onclick="filterSelection('colors')"> Colors</button> -->
+  </div>
+
+    <div class="container nonfiction show">
         <div class="book">
             <h3 class="book-title"><image src="images/Nudge.png" class="book_thumbnail"></image>Nudge - Unless you are someone who loves bureaucracy, finds choosing the correct insurance simple, works at Turbo Tax, or are a lazy lawmaker, you will find the insights and examples of these Nobel Prize-winning economists intriguing. </br>
             👍 👍 👍 👍 👍 </h3>
@@ -36,7 +49,7 @@
             </button>
         </div>
     </div>    
-    <div class="container">
+    <div class="container nonfiction autobiographical show">
         <div class="book">
             <h3 class="book-title"><image src="images/OnWriting.png" class="book_thumbnail"></image>On Writing - While it was captivating at times, I cannot recommend this as just a Stephen King fan- you must genuinely be interested in learning about his process, are a fiction writer yourself, or have run out of other King works to read. Less memoir, more manual. </br>
                 👎 👎</h3>
@@ -61,7 +74,7 @@
             </button>
         </div>
     </div>   
-    <div class="container">
+    <div class="container nonfiction PNW show">
         <div class="book">
             <h3 class="book-title"><image src="images/Endangered_Orca.png" class="book_thumbnail"></image>Endangered Orcas - A thorough book about the most well-studied group of cetaceans - the Southern Resident Killer Whales .   A must-read for any orca or PNW history fanatic. </br>
             ❤️ ❤️ ❤️ ❤️ ❤️  </h3>
@@ -85,7 +98,7 @@
             </button>
         </div>
     </div>   
-    <div class="container">
+    <div class="container nonfiction autobiographical show">
         <div class="book">
             <h3 class="book-title"><image src="images/Gucci_Mane.png" class="book_thumbnail"></image>The Autobiography of Gucci Man - Radric Davis, aka Gucci, can tell a story as well as he can write a hit song.  From poverty, violence, prison, drug addiction, to inventing a new genre of music Gucci has lived a crazy life. Love him or hate him, Gucci gives a raw, honest retelling of his life and the crazy shit that happened along the way.  I would recommend this to anyone interested in Musicians, Trap Music, ATL, or learning more about the African American experience in the US.   </br>
             🎤 🎤 🎤 🎤  </h3>
@@ -103,7 +116,7 @@
             </button>
         </div>
     </div>   
-    <div class="container">
+    <div class="container fake show">
         <div class="book">
             <h3 class="book-title"><image src="images/Insomnia.png" class="book_thumbnail"></image>Insomnia - Unless you suffer from the namesake disease, I cannot recommend reading this.  I made it about 45 pages. </br>
             😴 </h3>
@@ -120,7 +133,7 @@
             </button>
         </div>
     </div>   
-    <div class="container">
+    <div class="container nonfiction show">
         <div class="book">
             <h3 class="book-title"><image src="images/The_Tower.png" class="book_thumbnail"></image>The Tower - Tales of glory and deciept on one of the most beautiful mountains on Earth.  A engaging read for climbers and flat landers alike </br>
             🏔 🏔 🏔 🏔  </h3>
@@ -138,7 +151,7 @@
             </button>
         </div>
     </div>   
-    <div class="container">
+    <div class="container fake show">
         <div class="book">
             <h3 class="book-title"><image src="images/Bible.png" class="book_thumbnail"></image>The New Testament - "I read it in High School high as shit.  I remember nothing" - Keith Iverson </br>
             👐  👐  👐 </h3>
@@ -156,6 +169,44 @@
             </button>
         </div>
     </div>   
+    <div class="container nonfiction PNW show">
+        <div class="book">
+            <h3 class="book-title"><image src="images/Weather_PNW.png" class="book_thumbnail"></image> A thorough collection of PNW storm records, weather processes, meteorological phenomena, and predictions about our climate in the next 50-100 years from a leading climate expert.  This book is part meteorology 101, part PNW storm history, and jam-packed with exciting graphics and charts. While you could learn about these in other books, this is great because the author uses everyday and historical examples from our backyard.       </br>
+            💨 🌧 🌞 ❄️ </h3>
+            
+            <p class="book-text"> It is digestible by both the expert and novice weather enthusiast, and you can skip over dull sections.  Chapters cover everything from the basics, to floods, storms, coastal weather features, mountain-related phenomena, to snowpack, forest fires, to climate change and weather prediction challenges.  The author walks you through how meteorologists make forecasts, both historically and to this day.  I learned that the weather in the PNW is the MOST PREDICTABLE in the nation.  Some parts are quite dry, but you can just skip them, and some graphics are shockingly low quality and hard to understand.  Unlike his blog, you will find no politics here.
+                <br>
+                <br>
+                <b>More:</b>
+                <a href="https://seattle.bibliocommons.com/v2/record/S30C3687284"  target="_blank">Seattle Public Library</a>
+                <a href="https://cliffmass.blogspot.com/" target="_blank">Cliff Mass Blog</a>
+            </p>
+            <button class="book-toggle">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>   
+    <div class="container nonfiction show">
+        <div class="book">
+            <h3 class="book-title"><image src="images/Address_Book.png" class="book_thumbnail"></image> The Address Book- From unaddressed slums in India to some very offensively named lane in England, Diedre takes us on a global tour examining power and identity thru the lens of street names. A great read, but only for the geo-inclined.</br>
+            🌎 🌍 🌏 </h3>
+            
+            <p class="book-text"> By examining different address systems worldwide, the author argues that addressing is one of the quickest ways to lift people out of poverty, get access to credit, vote, or receive Amazon packages.  She also shows us how they can be used to oppress, leave out, and disconnect a population.  What street do you live on, and how do you feel about the name?
+
+                <br>
+                <br>
+                <b>More:</b>
+                <a href="https://seattle.bibliocommons.com/v2/record/S30C3523530"  target="_blank">Seattle Public Library</a>
+                <a href="https://en.wikipedia.org/wiki/Gropecunt_Lane" target="_blank">Offensive Street in England</a>
+            </p>
+            <button class="book-toggle">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>   
+    
 
     <script src="app.js"></script>
 </body>
