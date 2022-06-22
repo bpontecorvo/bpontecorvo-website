@@ -109,8 +109,8 @@ h1 {
   margin: 0 auto;
 }
 .container {
-  min-width: 500px;
-  max-width: 700px;
+  min-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
   background-color: #B8D8A1;
   display: none;
@@ -245,8 +245,8 @@ p > a:active {
   cursor: pointer;
   margin: 4px auto;
   align-content: center;
+  display: inline-block;
 }
-
 /* Add a light grey background on mouse-over */
 .btn:hover {
   background-color: #ddd;
@@ -278,12 +278,13 @@ p > a:active {
   display: block;
 }
 #myBtnContainer {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 160px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  /* height: 100%; Full-height: remove this if you want "auto" height */
+  width: 570px; /* Set the width of the sidebar */
+  position: relative; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
-  top: 200px; /* Stay at the top */
-  left: 26px;
+  /* top: 200px; /* Stay at the top */
+  /* left: 26px; */ 
+  margin: 0 auto;
   
   /* overflow-x: hidden; Disable horizontal scroll */
   padding-top: 20px;
