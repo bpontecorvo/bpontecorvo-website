@@ -97,6 +97,8 @@ background: #b999d9;
   justify-items: end;                       /* This is to style the main image of me on the homepage */
   border-radius: 10px;
   border: 1px solid grey;
+  width: 100%;
+  height: auto;
 }
 .about-me {
   grid-column: 3 / span 3;
@@ -111,7 +113,7 @@ background: #b999d9;
   letter-spacing: .3px;
 }
 .six {
-  grid-column: 2 / span 3;
+  grid-column: 3 / span 3;
   grid-row: 4 / span 2;
 }
 /* Book Review Page Stuff */
