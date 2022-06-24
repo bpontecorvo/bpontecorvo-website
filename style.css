@@ -66,7 +66,7 @@ h4 {
   justify-content: center;
   font-family: 'Quicksand', sans-serif;
   color: black;
-  border-bottom: 1px solid #1D2F6F;
+  /* border-bottom: 1px solid #1D2F6F; */
   background-color: #CCBEDA;
   position: relative;
   font-size: 20px;
