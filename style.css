@@ -35,50 +35,58 @@ h4 {
   left: 1px;
   z-index: 2;
 }
-.one {
-  grid-column: 1 / span 4;
-  grid-row: 1;
-  font-size: 18px;
-  font-weight: 400;
-  font-family: 'Quicksand', sans-serif;
-  letter-spacing: 0.5px;
-  /* align-self: center; */
-  display: grid;
-}
-.climbing {
-  grid-column: 5 / span 2;
-  grid-row: 1 / 2;
-  display: grid;
-
-}
-.books {
-  grid-column: 7 / span 2;
+/* Next two are spacers */
+.zero {
+  grid-column: 1 / span 2;
   grid-row: 1 / 2;
   display: grid;
 }
-.maps {
+.last {
   grid-column: 9 / span 2;
   grid-row: 1 / 2;
   display: grid;
 }
- .maps, .books, .climbing, .one {                 /*    Nav Bar Items  */
+.climbing {
+  grid-column: 6 / span 1;
+  grid-row: 1 / 2;
+  display: grid;
+}
+.books {
+  grid-column: 7 / span 1;
+  grid-row: 1 / 2;
+  display: grid;
+}
+.maps {
+  grid-column: 8 / span 1;
+  grid-row: 1 / 2;
+  display: grid;
+}
+ .maps, .books, .climbing, .one, .zero, .last {                 /*    Nav Bar Items  */
   align-content: center;
   justify-content: center;
   font-family: 'Quicksand', sans-serif;
   color: black;
-  border: 1px solid #1D2F6F;
+  border-bottom: 1px solid #1D2F6F;
   background-color: #CCBEDA;
   position: relative;
   font-size: 20px;
   top: -11px;
 }
-
+.one {
+  grid-column: 3 / span 3;
+  font-size: 26px;
+  font-weight: 400;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 0.5px;
+  /* align-self: center; */
+  display: grid;
+  text-align: left;
+}
 .maps:hover, .books:hover, .climbing:hover, .one:hover {
 border-top-color: #51527B;
 background: #51527B;
 color: #ccc;
 }
-
 .maps:active, .books:active, .climbing:active, .one:active {
 border-top-color: #1D2F6F;
 background: #1D2F6F;
@@ -96,7 +104,7 @@ background: #1D2F6F;
 }
 .about-me-title {
   grid-column: 3 / span 3;
-  grid-row: 2 / span }
+  grid-row: 2 / span 1 }
 .six {
   grid-column: 2 / span 3;
   grid-row: 4 / span 2;
