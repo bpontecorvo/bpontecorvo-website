@@ -154,7 +154,7 @@ h1 {
   background-color: #B8D8A1;
 }
 .hook {
-  text-align: right;
+  /* text-align: right; */
   letter-spacing: .6;
   font-style: normal;
   font-weight: 400;
