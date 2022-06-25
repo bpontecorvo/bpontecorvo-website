@@ -191,7 +191,7 @@ h1 {
 }
 .book-text {
   display: none;
-  margin: 1rem 0 0;
+  /* margin: 1rem 0 0; */
 }
 .book.active .book-text {
   display: block;
@@ -207,8 +207,8 @@ h1 {
   font-size: 1.3rem;
   padding: 0;
   position: relative;
-  top: -12px;
-  left: 200px;
+  top: -7px;
+  left: 182px;
   height: 45px;
   width: 45px;
   margin: auto 0;
