@@ -131,7 +131,7 @@ h1 {
   min-width: 400px;
   max-width: 500px;
   margin: 0 auto;
-  background-color: #B8D8A1;
+  /* background-color: #B8D8A1; */
   display: none;
   
 }
@@ -139,11 +139,12 @@ h1 {
   background-color: fff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px;
   padding: 0 15px;;
-  margin: 20px 0;
+  margin: 20px 10px;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   border-radius: 1%;
+  background-color: #B8D8A1;
 }
 .book.active {
   background-color: #CBDFBD;
@@ -294,7 +295,7 @@ p > a:active {
 
 /* The "show" class is added to the filtered elements */
 .show {
-  display: block;
+  display: inline-block;
 }
 #myBtnContainer {
   /* height: 100%; Full-height: remove this if you want "auto" height */
