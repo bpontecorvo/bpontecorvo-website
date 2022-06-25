@@ -1,3 +1,7 @@
+/* * {
+  border: 1px solid red;
+} */
+
 @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
 body {
   background-color: #EEEEE4;
@@ -129,7 +133,7 @@ h1 {
 }
 .container {
   min-width: 400px;
-  max-width: 500px;
+  max-width: 450px;
   margin: 0 auto;
   /* background-color: #B8D8A1; */
   display: none;
@@ -148,6 +152,23 @@ h1 {
   transition: all 0.3s ease-in-out;
   border-radius: 1%;
   background-color: #B8D8A1;
+}
+.hook {
+  text-align: right;
+  letter-spacing: .6;
+  font-style: normal;
+  font-weight: 400;
+  padding-top: 13px;
+  font-family: 'Quicksand', serif;
+  font-size: 18px;
+}
+.rating {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  /* font-style: italic; */
+  font-family: 'Quicksand', sans-serif;
+  padding-top: 10px;
 }
 .book.active {
   background-color: #CBDFBD;
@@ -186,10 +207,10 @@ h1 {
   font-size: 1.3rem;
   padding: 0;
   position: relative;
-  top: -15px;
-  left: 398px;
-  height: 40px;
-  width: 40px;
+  top: -12px;
+  left: 200px;
+  height: 45px;
+  width: 45px;
   margin: auto 0;
 }
 .image {
@@ -211,17 +232,14 @@ h1 {
   display: block;
   color: #333;
 }
-
 .book.active .book-toggle .fa-chevron-down {
   display: none;
 }
-
 .book_thumbnail {
   border-radius: 3px;                         /* This just to style the book screen grabs */
   border: 1px solid black;
   margin-right: 10px;
   max-height: 210px;
-
 }
 
   /* THIS IS ALL FOR THE "MORE" BUTTONS  */
