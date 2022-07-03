@@ -352,3 +352,12 @@ p > a:active {
   #myBtnContainer {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 } */
+
+
+
+.mapcontainer {
+display: block;
+  margin: 0 auto;
+  text-align: center;
+
+}
