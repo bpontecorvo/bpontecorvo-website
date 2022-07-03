@@ -361,3 +361,16 @@ display: block;
   text-align: center;
 
 }
+.map_thumbnail {
+  border-radius: 3px;                         /* This just to style the map screen grabs */
+  border: 1px solid black;
+  margin-right: 10px;
+  max-height: 300px;
+}
+.map_title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  font-family: 'Quicksand', sans-serif;
+  margin:  14px auto;
+}
