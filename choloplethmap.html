@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <!-- Import Mapbox GL JS  -->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+  <!-- Import Assembly -->
+  <link href='https://api.mapbox.com/mapbox-assembly/v1.3.0/assembly.min.css' rel='stylesheet'>
+  <script src='https://api.mapbox.com/mapbox-assembly/v1.3.0/assembly.js'></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="https://kit.fontawesome.com/fcdb5cfd7f.js" crossorigin="anonymous"></script>
+
+  <title>Choropleth Map</title>
+   
+ 
+      
+   <style>
+        body {
+             margin: 0;
+             padding: 0;
+        }
+
+        h2,
+        h3 {
+             margin: 10px;
+             font-size: 18px;
+        }
+
+        h3 {
+             font-size: 16px;
+        }
+
+        p {
+             margin: 10px;
+        }
+
+        /**
+        * Create a position for the map
+        * on the page */
+        #map {
+                position: relative;
+                top: 0;
+                bottom: 0;
+                width: 75%;
+                height: 650px;
+                margin: 0 auto;
+                border-radius: 10px;
+                border: solid black 2px;
+                margin-top: 20px;
+        }
+
+        /**
+        * Set rules for how the map overlays
+        * (information box and legend) will be displayed
+        * on the page. */
+        .map-overlay {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: #fff;
+            margin-right: 20px;
+            font-family: Arial, sans-serif;
+            overflow: auto;
+            border-radius: 3px;
+            z-index: 1;
+            padding: 6px;
+            }
+
+        #features {
+            top: 0;
+            height: 106px;
+            margin-top: 20px;
+            width: 250px;
+            z-index: 1;
+        }
+
+        #legend {
+            padding: 10px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            line-height: 18px;
+            height: 170px;
+            margin-bottom: 40px;
+            width: 100px;
+            z-index: 1;
+        }
+
+        .legend-key {
+            display: inline-block;
+            border-radius: 20%;
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+            /* z-index: 1; */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="zero"></div>  <!--spacer -->
+        <a class="one navlink" href="index.html"> Ben Pontecorvo</a>
+        <div class="climbing navlink">Climbing</div>
+        <div class="books navlink">Book Reviews</div>
+        <a class="maps navlink" href="Maps.html">Map Projects</a>
+        <div class="last navlink"></div> <!--spacer -->
+    </div>
+    <h1>Cholopleth Map</h1>
+    <h4 class="Book_review_sub_heading">This is a simple map I made following Mapbox's tutorial 
+    </h4>
+    <div class="mapcontainer">
+    <div id='map'>
+    <div class='map-overlay' id='features'>
+        <h2>US population density</h2>
+            <div id='pd'>
+                <p>Hover over a state!</p>
+            </div>
+    </div>
+        <div class='map-overlay' id='legend'></div> 
+    </div>
+
+
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaWduZW91cy1pbnRydXNpb24iLCJhIjoiY2p3aDhobXVtMWc3aTN5cGltdWEwbDRqMiJ9.hekuu87GVL5nyf9rH0WS9w';
+
+    const map = new mapboxgl.Map({
+  container: 'map', // container id
+  style: 'mapbox://styles/igneous-intrusion/cl0iz1yl3000p16o2sjxedvb6' // replace this with your style URL
+});
+
+map.on('load', () => {
+
+    //cursor
+    map.getCanvas().style.cursor = 'default';
+
+    //set bounds
+    map.fitBounds([
+  [-133.2421875, 16.972741],
+  [-47.63671875, 52.696361]
+  ]);
+
+    const layers = [
+        '0-10',
+        '10-20',
+        '20-50',
+        '50-100',
+        '100-200',
+        '200-500',
+        '500-1000',
+        '1000+'
+    ];
+    const colors = [
+        '#FFEDA0',
+        '#FED976',
+        '#FEB24C',
+        '#FD8D3C',
+        '#FC4E2A',
+        '#E31A1C',
+        '#BD0026',
+        '#800026'
+    ];
+    // create legend
+        const legend = document.getElementById('legend');
+
+        layers.forEach((layer, i) => {
+        const color = colors[i];
+        const item = document.createElement('div');
+        const key = document.createElement('span');
+        key.className = 'legend-key';
+        key.style.backgroundColor = color;
+
+        const value = document.createElement('span');
+        value.innerHTML = `${layer}`;
+        item.appendChild(key);
+        item.appendChild(value);
+        legend.appendChild(item);
+        });
+
+
+    map.on('mousemove', (event) => {
+        const states = map.queryRenderedFeatures(event.point, {
+        layers: ['statedata']
+    });
+
+         document.getElementById('pd').innerHTML = states.length
+    ? `<h3>${states[0].properties.name}</h3><p><strong><em>${states[0].properties.density}</strong> people per square mile</em></p>`
+    : `<p>Hover over a state!</p>`;
+});
+});
+
+
+</script>
+
+</body>
+</html>

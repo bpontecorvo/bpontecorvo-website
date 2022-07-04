@@ -149,7 +149,7 @@ h1 {
 .container {
   min-width: 400px;
   max-width: 450px;
-  margin: 0 auto;
+  margin: 10px 10px;
   /* background-color: #B8D8A1; */
   display: none;
   vertical-align: top;
@@ -356,7 +356,7 @@ p > a:active {
 
 
 .mapcontainer {
-display: block;
+ display: block;
   margin: 0 auto;
   text-align: center;
 
