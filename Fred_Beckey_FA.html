@@ -64,13 +64,13 @@
           // Replace YOUR_STYLE_URL with your style URL.
           style: 'mapbox://styles/igneous-intrusion/cl0g122ui001q14lqf3wkrwuj', 
           center: [-121.661557, 41.893748],
-          zoom: 1,
+          zoom: 2
         });
 
         map.on('click', (event) => {
         // If the user clicked on one of your markers, get its information.
         const features = map.queryRenderedFeatures(event.point, {
-            layers: ['Outdoors'] // replace with your layer name
+            layers: ['fred-beckey-fa-data'] // replace with your layer name
         });
         if (!features.length) {
             return;
@@ -80,7 +80,9 @@
         const popup = new mapboxgl.Popup({ offset: [0, -15] })
         .setLngLat(feature.geometry.coordinates)
         .setHTML(
-            `<h3>${feature.properties.Mountain}</h3>`
+            `<h3>${feature.properties.Mountain}</h3>
+            <p>${feature.properties.Route}</p>
+            <p>${feature.properties.Year}</p>`
         )
         .addTo(map);
         });           
