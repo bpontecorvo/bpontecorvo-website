@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="https://kit.fontawesome.com/fcdb5cfd7f.js" crossorigin="anonymous"></script>
 
-    <title>Projects</title>
+    <title>Weather Station</title>
 </head>
 <body>
     <div class="wrapper">
@@ -18,9 +18,12 @@
         <div class="maps navlink">Map Projects</div>
         <div class="last navlink"></div> <!--spacer -->
     </div>
-    <h1>Map Projects</h1>
-    <h4 class="Book_review_sub_heading">Here are some old and new projects of mine.
+    <h1>Personal Weather Station</h1>
+    <h4 class="Book_review_sub_heading">Here is a live feed of data from my weather station in the Ballard neighborhood of Seattle, WA. 
+
+
     </h4>
+<br>
 
     <!-- Control buttons -->
     <!-- <h5>Fliter by Category</h5> -->
@@ -35,30 +38,15 @@
          <button class="btn" onclick="filterSelection('colors')"> Colors</button> -->
   <!-- </div> -->
 <div class="containercontainer">
-    <div class="container nonfiction PNW show">
-        <div class="map isochrone">
-            <div class="map_title">Mapbox Isochrones API</div> 
-            <a href="https://bpontecorvo.me/isochrone_map.html"><image src="map_thumbnails/Isochrone.png" class="map_thumbnail"></image></a>
-        </div>
-    </div>   
-        
-    <div class="container nonfiction PNW show">
-        <div class="map choropleth">
-            <div class="map_title">State Density Choropleth</div> 
-            <a href="https://bpontecorvo.me/choroplethmap.html"><image src="map_thumbnails/Choropleth.png" class="map_thumbnail"></image></a>
-        </div>
-    </div>   
-    <div class="container nonfiction PNW show">
-        <div class="map FredBeckey">
-            <div class="map_title">Fred Beckeys First Ascents</div> 
-            <a href="https://bpontecorvo.me/Fred_Beckey_FA.html"><image src="map_thumbnails/FredBeckey_FA.png" class="map_thumbnail"></image></a>
-        </div>
-    </div>
+    <iframe width="1200" height="3150" frameborder="0" src="https://ambientweather.net/devices/public/06d628fca6b96bcaf06feb31cc2c254e?embed=true"></iframe><p>powered by <a target="_blank" href="https://ambientweather.net">Ambient Weather</a></p>
 </div>      
     <script src="filter.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
+
+
+
 
 
 
