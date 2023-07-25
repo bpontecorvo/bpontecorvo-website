@@ -35,6 +35,31 @@
             margin-top: 20px;
             z-index: 1;
     }
+
+        .map-overlay {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: #fff;
+            margin-right: 30px;
+            margin-bottom: 30px;
+            border: black solid;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            vertical-align: center;
+            overflow: auto;
+            text-align: center;
+
+            border-radius: 7px;
+            z-index: 1;
+    }
+.img {
+    position: absolute;
+    vertical-align: middle;
+    left: ;
+}
+
+        
 </style>
 </head>
 
@@ -51,7 +76,31 @@
     <h4 class="Book_review_sub_heading">In a college Cartography Class I designed a physical map of Fred's first ascents.  Luckily I had the data saved and am able to remake it here.
     </h4>
     <div class="mapcontainer">
-        <div id='map'></div>
+        <div id='map'>
+            <div class='map-overlay'><strong id="legend-title">Fred Beckeys First Ascents</strong>
+                <nav class='legend clearfix'>
+                <span><img id="legend-icon"
+                    src="SVG/circle.svg"
+                    height="30"
+                    width="30"/></span><label>First Ascent</label><br>
+                <span><img id="legend-icon"
+                    src="SVG/johnny-automatic-Land-recreation-symbols-7.svg"
+                    height="30"
+                    width="30"/></span><label>First Free Ascent</label><br>
+                <span><img id="legend-icon"
+                    src="SVG/SNOWFLAKE.svg"
+                    height="30"
+                    width="30"/></span><label>First Winter Ascent</label><br>
+
+            <br>
+                
+                
+                
+
+                </nav>
+            </div>
+        </div>
+       
      </div>
 
 
@@ -88,6 +137,8 @@
         )
         .addTo(map);
         });           
+
+        
     
         </script>
 
