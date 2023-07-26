@@ -45,6 +45,7 @@
             margin-bottom: 30px;
             border: black solid;
             padding: 10px;
+            font-size: larger;
             font-family: Arial, sans-serif;
             vertical-align: center;
             overflow: auto;
@@ -53,11 +54,20 @@
             border-radius: 7px;
             z-index: 1;
     }
-.img {
-    position: absolute;
-    vertical-align: middle;
-    left: ;
-}
+        .legend-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            fill: black;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+        }
+        .legend-title {
+            padding-bottom: 10px;
+        }
 
         
 </style>
@@ -77,27 +87,24 @@
     </h4>
     <div class="mapcontainer">
         <div id='map'>
-            <div class='map-overlay'><strong id="legend-title">Fred Beckeys First Ascents</strong>
-                <nav class='legend clearfix'>
-                <span><img id="legend-icon"
-                    src="SVG/circle.svg"
-                    height="30"
-                    width="30"/></span><label>First Ascent</label><br>
-                <span><img id="legend-icon"
-                    src="SVG/johnny-automatic-Land-recreation-symbols-7.svg"
-                    height="30"
-                    width="30"/></span><label>First Free Ascent</label><br>
-                <span><img id="legend-icon"
-                    src="SVG/SNOWFLAKE.svg"
-                    height="30"
-                    width="30"/></span><label>First Winter Ascent</label><br>
+            <h1 class='map-overlay'><strong>Fred Beckey's First Ascents</strong><br>
+                <div class="legend-item">
+                    <img class="legend-icon" src="SVG/circle.svg">
+                    
+                    <span class="legend-description">First Ascent</span>
+                </div>
 
-            <br>
-                
-                
-                
+                <div class="legend-item">
+                    <img class="legend-icon" src="SVG/SNOWFLAKE.svg">
+                    
+                    <span class="legend-description">First Winter Ascent</span>
+                </div>
 
-                </nav>
+                <div class="legend-item">
+                    <img class="legend-icon" src="SVG/johnny-automatic-Land-recreation-symbols-7.svg">
+                    
+                    <span class="legend-description">First Free Ascent</span>
+                </div>
             </div>
         </div>
        
