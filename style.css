@@ -1,57 +1,127 @@
- /* * {
-  border: 1px solid darkred;
-}  */
+/* * {
+  border: 1px solid red;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+html {
+  position:relative; 
+  min-height: 100%;
+}
+body {
+  background-color: #EEEEE4;
+  font-family: "Arvo", serif;
+  text-decoration: none;
+}
 p {
-  font-family: 'Bitter', serif;
-  display: inline;
+  font-family: "Bitter", serif;
+  display: block;
+}
+.rating > p {
+  margin-top: 8px;
+  margin-bottom: -9px;
+}
+a {
+  text-decoration: none;
 }
 h2 {
   font-family: 'Quicksand', sans-serif;
   display: inline;
+  margin: 0 auto;
 }
+h3 {
+  font-size: medium;
+}
+h4 {
+  text-align: center;
+ 
+}
+.rating > h4 {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  
+}
+.score {
+  color: #36558f;
+}
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 110%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #646e78;
+  color: white;
+  height: auto;
 
+}
 .wrapper {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  gap: 5px;
+  gap: 0px;
   grid-template-rows: 50px;
   grid-auto-rows: minmax(100px, auto);
   margin: auto 50 px;
+  position: fixed;
+  width: 100%;
+  top: 10px;
+  left: 1px;
+  z-index: 2;
 }
-.one {
-  grid-column: 2 / span 3;
-  grid-row: 1;
-  font-size: 18px;
-  font-weight: 400;
-  font-family: 'Quicksand', sans-serif;
-  letter-spacing: 0.5px;
-  text-align: left;
-  border-radius: 0 0 6px;
-  align-self: center;
+/* Next two are spacers */
+.zero {
+  grid-column: 1 / span 2;
+  grid-row: 1 / 2;
+  display: grid;
+}
+.last {
+  grid-column: 9 / span 2;
+  grid-row: 1 / 2;
+  display: grid;
 }
 .climbing {
   grid-column: 6 / span 1;
   grid-row: 1 / 2;
   display: grid;
-  border-radius: 0 0 6px 6px;
 }
 .books {
   grid-column: 7 / span 1;
   grid-row: 1 / 2;
   display: grid;
-  border-radius: 0 0 6px 6px;
 }
 .maps {
   grid-column: 8 / span 1;
   grid-row: 1 / 2;
   display: grid;
-  border-radius: 0 0 0 6px;
 }
-.maps, .books, .climbing, .more {
+ .maps, .books, .climbing, .one, .zero, .last {                 /*    Nav Bar Items  */
   align-content: center;
   justify-content: center;
   font-family: 'Quicksand', sans-serif;
-  color: black
+  color: black;
+  border-bottom: .5px solid #ac82d5;
+  background-color: #CCBEDA;
+  position: relative;
+  font-size: 20px;
+  top: -11px;
+}
+.one {
+  grid-column: 3 / span 3;
+  font-size: 26px;
+  font-weight: 400;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 0.5px;
+  /* align-self: center; */
+  display: grid;
+  text-align: left;
+}
+.maps:hover, .books:hover, .climbing:hover, .one:hover {
+border-top-color: #51527B;
+background: #c2aed6;
+color: black;
+}
+.maps:active, .books:active, .climbing:active, .one:active {
+border-top-color: #1D2F6F;
+background: #b999d9;
 }
 .image {
   grid-column: 6 / span 3;
@@ -59,89 +129,261 @@ h2 {
   justify-items: end;                       /* This is to style the main image of me on the homepage */
   border-radius: 10px;
   border: 1px solid grey;
+  width: 75%;
+  height: auto;
+  place-self: center;
 }
-.book_image {
-  height: 270px;
-  min-width: 174px;
-  width: 25%;
-  display: inline-block;                     /* This is the container for the image + rating to style the book screen grabs */
-  vertical-align: top;
+.about-me {
+  grid-column: 3 / span 3;
+  grid-row: 2 / span 2;
+  letter-spacing: .3px;
+  padding-right: 5px;
+}
+.about-me-title {
+  grid-column: 3 / span 3;
+  grid-row: 2 / span 1;
+  text-align: center; 
+  letter-spacing: .3px;
+}
+.six {
+  grid-column: 3 / span 3;
+  grid-row: 4 / span 2;
+}
+/* Book Review Page Stuff */
+h1 {
+  margin: 3rem 0 2rem;
   text-align: center;
-  padding-top: 5px;
+  margin-top: 76px;
+}
+.Book_review_sub_heading {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.container {
+  min-width: 400px;
+  max-width: 450px;
+  margin: 10px 10px;
+  /* background-color: #B8D8A1; */
+  display: none;
+  vertical-align: top;
+  }
+  .containercontainer {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+.book {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px;
+  padding: 0 15px;;
+  margin: 20px 10px;
+  min-height: 290px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border-radius: 1%;
+  background-color: #B8D8A1;
+}
+.hook {
+  /* text-align: right; */
+  letter-spacing: .6;
+  font-style: normal;
+  font-weight: 400;
+  padding-top: 13px;
+  font-family: 'Quicksand', serif;
+  font-size: 18px;
+}
+.rating {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  /* font-style: italic; */
+  font-family: 'Quicksand', sans-serif;
+  padding-top: 10px;
+}
+.book.active {
+  background-color: #CBDFBD;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px;
+}
+.book.active::before {
+  font-family: "Font Awesome 5 Free";
+  color: #0010f7f7;
+  font-size: 7rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: .09;
+  z-index: 0;
+  }
+.book-title {
+    display: flex;
+    letter-spacing: .09;
+}
+.book-text {
+  display: none;
+  /* margin: 1rem 0 0; */
+}
+.book.active .book-text {
+  display: block;
+}
+.book-toggle {
+  background-color: #CBDFBD;
+  border: 2px solid #6E6E6E;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  padding: 0;
+  position: relative;
+  top: -7px;
+  left: 182px;
+  height: 45px;
+  width: 45px;
+  margin: auto 0;
+}
+.image {
+  margin: 5px;
+}
+.book-toggle:focus {
+  outline: none;
+}
+
+.book.active .book-toggle {
+  background-color: #CBDFBD;
+}
+
+.book-toggle .fa-times {
+  display: none;
+}
+
+.book.active .book-toggle .fa-times {
+  display: block;
+  color: #333;
+}
+.book.active .book-toggle .fa-chevron-down {
+  display: none;
 }
 .book_thumbnail {
   border-radius: 3px;                         /* This just to style the book screen grabs */
   border: 1px solid black;
+  margin-right: 10px;
+  max-height: 210px;
+}
 
-}
-.book_description {
-  min-height: 270px;                          /* This is the Container for the description + links */
-  width: 70%;
-  display: inline-block;
-  vertical-align: top;
-  margin: 5px;
-  /* overflow: auto; */
-}
-a:hover {
-  cursor: pointer;                   /*    Style Cursor to be pointer over links */
-}
-.more {                             /*    Style "more" bucket   */
-
-  text-align: center;
-  margin: 5px;
-}
-.more > h3 {
-  display: inline;
-}
-.about-me {
-  grid-column: 2 / span 3;
-  grid-row: 2 / span 2;
-  /* font-family: 'Bitter', serif; */
-}
-.collapsible {
-  background-color: #777;
+  /* THIS IS ALL FOR THE "MORE" BUTTONS  */
+p > a {
+  border-top: 1px solid #96d1f8;
+  background: #146326;
+  background: -webkit-gradient(linear, left top, left bottom, from(#37bf4c), to(#146326));
+  background: -webkit-linear-gradient(top, #37bf4c, #146326);
+  background: -moz-linear-gradient(top, #37bf4c, #146326);
+  background: -ms-linear-gradient(top, #37bf4c, #146326);
+  background: -o-linear-gradient(top, #37bf4c, #146326);
+  padding: 3.5px 7px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  box-shadow: rgba(0,0,0,1) 0 1px 0;
+  text-shadow: rgba(0,0,0,.4) 0 1px 0;
   color: white;
-  cursor: pointer;
-  padding: 9px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 17px;
-  text-align: center;
-  letter-spacing: 0.3px;
-}
-.active, .collapsible:hover {
-  background-color: rgb(56, 112, 49);
+  font-size: 12px;
+  font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+  text-decoration: none;
+  vertical-align: middle;
+  }
 
-}
-.content {
-  padding: 5px 21px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-.book_review {
-  grid-column: 2 / span 8;                      /* Styling for Book Review Page */
-  grid-row: 2 / 100;
-  text-align: center;
-}
- .review_bucket {                                 /* Styling for the review itself */
-  grid-column: 2 / span 8;                     
-  grid-row: 4 / 100;
+p > a:hover {
+  border-top-color: #51527B;
+  background: #51527B;
+  color: #ccc;
+    }
+
+p > a:active {
+  border-top-color: #1D2F6F;
+  background: #1D2F6F;
+}                                                   
+/* Style the buttons */
+.btn {
+  border: solid grey .4px;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #CCBEDA;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 4px auto;
+  align-content: center;
   display: inline-block;
 }
-
-.book_outline {
-  display: inline;
+/* Add a light grey background on mouse-over */
+.btn:hover {
+  background-color: #ddd;
 }
-/* .five {
-  grid-column: 2;
-  grid-row: 4;
-  background-color: saddlebrown; 
-} */
-.six {
-  grid-column: 2 / span 4;
-  grid-row: 4 / span 2;
 
+/* Add a dark background to the active button */
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+/* .container {
+  overflow: hidden;
+} */
+/* 
+.filterDiv {
+  float: left;
+  background-color: #2196F3;
+  color: #ffffff;
+  width: 160px;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+  display: none; Hidden by default
+} */
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: inline-block;
+  
+}
+#myBtnContainer {
+  /* height: 100%; Full-height: remove this if you want "auto" height */
+  width: 570px; /* Set the width of the sidebar */
+  position: relative; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  /* top: 200px; /* Stay at the top */
+  /* left: 26px; */ 
+  margin: 0 auto;
+  
+  /* overflow-x: hidden; Disable horizontal scroll */
+  padding-top: 20px;
+  text-align: center;
+}
+
+/* @media screen and (max-height: 450px) {
+  #myBtnContainer {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} */
+
+
+
+.mapcontainer {
+ display: block;
+  margin: 0 auto;
+  text-align: center;
+
+}
+.map_thumbnail {
+  border-radius: 3px;                         /* This just to style the map screen grabs */
+  border: 1px solid black;
+  margin-right: 10px;
+  max-height: 300px;
+}
+.map_title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  font-family: 'Quicksand', sans-serif;
+  margin:  14px auto;
 }
